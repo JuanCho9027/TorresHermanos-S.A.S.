@@ -5,24 +5,25 @@ module.exports = {
     username: process.env.DB_USER,
     password: process.env.DB_PASS,
     database: process.env.DB_NAME,
-    host: process.env.DB_HOST,
+    host: process.env.DB_HOST || "mysql.railway.internal",  // Aquí está el cambio
     dialect: "mysql",
   },
   test: {
     username: process.env.DB_USER,
     password: process.env.DB_PASS,
     database: process.env.DB_NAME,
-    host: process.env.DB_HOST,
+    host: process.env.DB_HOST || "mysql.railway.internal",  // Aquí está el cambio
     dialect: "mysql",
   },
   production: {
     username: process.env.DB_USER,
     password: process.env.DB_PASS,
     database: process.env.DB_NAME,
-    host: process.env.DB_HOST,
+    host: process.env.DB_HOST || "mysql.railway.internal",  // Aquí está el cambio
     dialect: "mysql",
   },
 };
+
 
 // require("dotenv").config();
 // module.exports = {
