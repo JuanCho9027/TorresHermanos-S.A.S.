@@ -1,0 +1,95 @@
+/* Required height of parents of the Half Page Carousel for proper displaying carousel itself */
+html,
+body,
+.view {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+table.table td,
+table.table th {
+  vertical-align: middle;
+}
+/* Half Page Carousel itself*/
+.carousel {
+  height: 100%;
+}
+.carousel .carousel-inner {
+  height: 157%;
+}
+.carousel .carousel-inner .carousel-item,
+.carousel .carousel-inner .active {
+  height: 100%;
+}
+
+/* Adjustment for mobile devices*/
+@media (max-width: 776px) {
+  .carousel {
+    height: 100%;
+  }
+}
+
+/* Footer color for sake of consistency with Navbar */
+.page-footer {
+  background-color: #929fba;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: auto;
+}
+
+.cart-number {
+  position: absolute;
+  top: 0;
+  padding-top: 6px;
+}
+
+main.error {
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+main.error h1 {
+  text-align: center;
+}
+
+.content-wrapper {
+  min-height: calc(89.5vh - 50px);
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-indicators {
+  bottom: -80px;
+}
+
+.slider{
+  width: 75vw;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+}
+.slider .slide-track{
+  display: flex;
+  animation: scroll 30s linear infinite;
+  /* -webkit-animation: scroll 40s linear infinite; */
+  width: calc(200px * 12);
+}
+.slider .slide{
+  width: 200px;
+}
+.slider .slide img{
+  width: 150px;
+}
+@keyframes scroll{
+  0%{
+    /* -webkit-transform: translateX(0); */
+    transform: translateX(0);
+  }
+  100%{
+    /* -webkit-transform: translateX(calc(-200px * 6)); */
+    transform: translateX(calc(-200px * 6));
+  }
+}
